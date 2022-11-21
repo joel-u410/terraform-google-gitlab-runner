@@ -32,8 +32,8 @@ variable "gitlab_url" {
   description = "The URL of the GitLab server hosting the projects to be built."
 }
 variable "gcp_resource_prefix" {
-  type    = string
-  default = "gitlab-ci"
+  type        = string
+  default     = "gitlab-ci"
   description = "The prefix to apply to all GCP resource names (e.g. <prefix>-runner, <prefix>-worker-1)."
 }
 
@@ -49,14 +49,14 @@ variable "ci_runner_gitlab_name" {
   description = "Register the runner in GitLab using this name.  If empty the value \"gcp-$${var.gcp_project}\" will be used."
 }
 variable "ci_runner_gitlab_tags" {
-    type        = string
-    default     = ""
-    description = "Register the runner to execute GitLab jobs with these tags."
+  type        = string
+  default     = ""
+  description = "Register the runner to execute GitLab jobs with these tags."
 }
 variable "ci_runner_gitlab_untagged" {
-    type        = string
-    default     = "true"
-    description = "Register the runner to also execute GitLab jobs that are untagged."
+  type        = string
+  default     = "true"
+  description = "Register the runner to also execute GitLab jobs that are untagged."
 }
 variable "ci_runner_instance_type" {
   type        = string

@@ -15,26 +15,26 @@
  */
 
 variable "gcp_project" {
-    type        = string
-    description = "The GCP project to deploy the runner into."
+  type        = string
+  description = "The GCP project to deploy the runner into."
 }
 variable "gcp_zone" {
-    type        = string
-    description = "The GCP zone to deploy the runner into."
+  type        = string
+  description = "The GCP zone to deploy the runner into."
 }
 variable "gitlab_url" {
-    type        = string
-    description = "The URL of the GitLab server to register the runner against."
+  type        = string
+  description = "The URL of the GitLab server to register the runner against."
 }
 variable "ci_token" {
-    type        = string
-    description = "The runner registration token obtained from GitLab."
+  type        = string
+  description = "The runner registration token obtained from GitLab."
 }
 variable "ci_concurrency" {
-    type        = number
-    description = "The maximum number of concurrent worker instances to create."
+  type        = number
+  description = "The maximum number of concurrent worker instances to create."
 }
 variable "ci_worker_idle_time" {
-    type        = number
-    description = "The maximum idle time for workers before they are shutdown."
+  type        = number
+  description = "The maximum idle time for workers before they are shutdown."
 }

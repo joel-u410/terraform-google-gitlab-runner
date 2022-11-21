@@ -24,14 +24,14 @@ terraform {
   required_providers {
     google = {
       version = "~> 3.58"
-      source = "hashicorp/google"
+      source  = "hashicorp/google"
     }
   }
 }
 
 # Install the GitLab CI Runner infrastructure
 module "ci" {
-  source  = "../../"
+  source = "../../"
 
   gcp_project         = var.gcp_project
   gcp_zone            = var.gcp_zone
@@ -46,6 +46,6 @@ module "ci" {
 module "ci-privileges" {
   source = "./modules/gitlab-ci-privileges"
 
-  gcp_project = var.gcp_project
+  gcp_project               = var.gcp_project
   ci_worker_service_account = module.ci.ci_worker_service_account.email
 }
