@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-gcp_zone    = "australia-southeast1-a"
+gcp_zone = "australia-southeast1-a"
 
 ci_concurrency      = 5
 ci_worker_idle_time = 3600
